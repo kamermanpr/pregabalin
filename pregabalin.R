@@ -58,6 +58,7 @@ t <- pregabalin %>%
                         levels = c('total'),
                         labels = c('Total'),
                         ordered = TRUE))
+
 pp_t <- ggplot(data = t) +
     aes(x = date,
         ymax = value,
@@ -90,6 +91,7 @@ tg <- pregabalin %>%
                         levels = c('total', 'generic'),
                         labels = c('Total', 'Generics (without named brands*)'),
                         ordered = TRUE))
+
 pp_tg <- ggplot(data = tg) +
     aes(x = date,
         ymax = value,
@@ -540,3 +542,4 @@ pp_pct2 <- ggplot(data = pct2) +
           plot.caption = element_text(size = 10))
 
 ggsave('percent-lyrica-generics-with-other-brands.png', pp_pct2, width = 9.1, height = 7.86)
+
